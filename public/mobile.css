@@ -1,0 +1,23 @@
+
+.box {
+  width: 70vw !important;
+}
+
+.newToDo input {
+  padding: 5px 8px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.newToDo button {
+  height: 24px;
+  width: 24px;
+}
+
+label {
+  font-size: .7rem;
+}
+
+.contact a {
+  font-size: 1.5rem;
+}

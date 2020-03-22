@@ -1,0 +1,24 @@
+<%- include('particals/header'); -%>
+    <div class="box">
+      <img src="todo-label.svg" class="work-flow">
+      <div class="showList scroll1">
+      <%lists.forEach(function(list){ %>
+      <div class="wrapToDo">
+          <input type="checkbox" id="<%= list._id %>">
+          <label for="<%= list._id %>"><%= list.name %></label>
+          <form action="/delete" method="POST">
+            <button type="submit" class="delete" name="delete" value="<%= list._id %>"><i class="fas fa-trash-alt"></i></button>
+          </form> 
+      </div>
+      <%});%>
+       </div>
+      <div class="wrapNew">
+        <form action="/" method="POST">
+          <div class="newToDo">
+            <input type="text" name="newtodo" autocomplete="off" placeholder="Typing here...">
+            <button type="submit" name="list">+</button>
+          </div>
+        </form>
+      </div>
+    </div>
+<%- include('particals/footer'); -%>
