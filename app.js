@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 
-mongoose.connect('mongodb+srv://admin:admin@tranchiencong-mwri0.mongodb.net/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('yourDataBase', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const todoSchema = {
   name: String
